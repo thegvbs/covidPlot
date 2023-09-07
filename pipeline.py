@@ -32,7 +32,7 @@ estados = {
     'SP': 'Sudeste'
 }
 
-def casos_confirmados_regiao(dataset):
+def casosRegiao(dataset):
     dataset_read = pd.read_csv(dataset)
     dadosOrg = dataset_read[['state', 'date', 'confirmed']]
     dadosOrg['date'] = pd.to_datetime(dadosOrg['date'])
@@ -53,4 +53,4 @@ def casos_confirmados_regiao(dataset):
     plt.savefig('grafico_reg.png')
     plt.show()
 
-casos_confirmados_regiao('casos.csv')
+casosRegiao('casos.csv')
